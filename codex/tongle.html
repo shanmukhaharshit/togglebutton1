@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Background Color</title>
+  <h1> Slab 1</h1>
+  <h1>Shanmukha Harshit </h1>
+  <h2> Web Dev Beginer project </h2>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #ff0000;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    body.dark {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="toggleButton">Toggle Background Color</button>
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
